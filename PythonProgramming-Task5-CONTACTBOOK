@@ -1,0 +1,117 @@
+import json
+import os
+
+# File where contacts will be stored
+CONTACTS_FILE = 'contacts.json'
+
+# Load contacts from file
+def load_contacts():
+    if os.path.exists(CONTACTS_FILE):
+        with open(CONTACTS_FILE, 'r') as file:
+            return json.load(file)
+    return {}
+
+# Save contacts to file
+def save_contacts(contacts):
+    with open(CONTACTS_FILE, 'w') as file:
+        json.dump(contacts, file, indent=4)
+
+# Add a new contact
+def add_contact():
+    name = input("Enter store name: ")
+    phone = input("Enter phone number: ")
+    email = input("Enter email address: ")
+    address = input("Enter address: ")
+    
+    contacts = load_contacts()
+    contacts[name] = {'phone': phone, 'email': email, 'address': address}
+    save_contacts(contacts)
+    print(f"Contact '{name}' added successfully!")
+
+# View all contacts
+def view_contacts():
+    contacts = load_contacts()
+    if not contacts:
+        print("No contacts available.")
+        return
+    
+    print("Contacts:")
+    for name, info in contacts.items():
+        print(f"Name: {name}, Phone: {info['phone']}")
+
+# Update an existing contact
+def update_contact():
+    name = input("Enter the store name to update: ")
+    contacts = load_contacts()
+    
+    if name not in contacts:
+        print(f"No contact found with name '{name}'.")
+        return
+    
+    phone = input("Enter new phone number: ")
+    email = input("Enter new email address: ")
+    address = input("Enter new address: ")
+    
+    contacts[name] = {'phone': phone, 'email': email, 'address': address}
+    save_contacts(contacts)
+    print(f"Contact '{name}' updated successfully!")
+
+# Delete a contact
+def delete_contact():
+    name = input("Enter the store name to delete: ")
+    contacts = load_contacts()
+    
+    if name not in contacts:
+        print(f"No contact found with name '{name}'.")
+        return
+    
+    del contacts[name]
+    save_contacts(contacts)
+    print(f"Contact '{name}' deleted successfully!")
+
+# Search for a contact
+def search_contact():
+    search_term = input("Enter name or phone number to search: ")
+    contacts = load_contacts()
+    
+    results = {name: info for name, info in contacts.items() if search_term in name or search_term in info['phone']}
+    
+    if not results:
+        print("No matching contacts found.")
+        return
+    
+    print("Search Results:")
+    for name, info in results.items():
+        print(f"Name: {name}, Phone: {info['phone']}, Email: {info['email']}, Address: {info['address']}")
+
+# Main menu
+def main_menu():
+    while True:
+        print("\nContact Management System")
+        print("1. Add Contact")
+        print("2. View Contacts")
+        print("3. Update Contact")
+        print("4. Delete Contact")
+        print("5. Search Contact")
+        print("6. Exit")
+        
+        choice = input("Select an option (1-6): ")
+        
+        if choice == '1':
+            add_contact()
+        elif choice == '2':
+            view_contacts()
+        elif choice == '3':
+            update_contact()
+        elif choice == '4':
+            delete_contact()
+        elif choice == '5':
+            search_contact()
+        elif choice == '6':
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main_menu()
