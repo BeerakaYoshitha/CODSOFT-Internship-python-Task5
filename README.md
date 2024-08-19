@@ -66,9 +66,10 @@ Duration: AUGUST 10TH TO SEPTEMBER 10TH 2024
  Delete Contact:
  Choose option 4.
  Enter the name of the contact you wish to delete.
+ 
  Search Contact:
-
  Choose option 5.
  Enter the name or phone number to find matching contacts.
+ 
  Exit:
  Choose option 6 to exit the application.
