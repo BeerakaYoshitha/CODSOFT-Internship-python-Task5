@@ -73,3 +73,13 @@ Duration: AUGUST 10TH TO SEPTEMBER 10TH 2024
  
  Exit:
  Choose option 6 to exit the application.
+
+ # CODE OF OUTPUT / EXAMPLE OF OUTPUT:
+
+ ![WhatsApp Image 2024-08-28 at 9 35 29 PM](https://github.com/user-attachments/assets/2ccb2877-6043-4456-b4c1-46b780ff66ea)
+![WhatsApp Image 2024-08-28 at 9 35 29 PM (1)](https://github.com/user-attachments/assets/869eb7b4-5b8c-4a9c-9f83-d2039465af06)
+![WhatsApp Image 2024-08-28 at 9 35 34 PM](https://github.com/user-attachments/assets/ee680c8a-22b9-4183-9d9c-2d90d94b6a22)
+![WhatsApp Image 2024-08-28 at 9 35 35 PM](https://github.com/user-attachments/assets/f6533eaa-0ecf-4152-9faf-ac9127ae13dc)
+![WhatsApp Image 2024-08-28 at 9 35 36 PM](https://github.com/user-attachments/assets/8f434fd8-c2e4-4db8-8343-64fd6d6ed92f)
+![WhatsApp Image 2024-08-28 at 9 35 36 PM (1)](https://github.com/user-attachments/assets/50ace11a-24f8-42b0-b399-e2509dfb756a)
+
